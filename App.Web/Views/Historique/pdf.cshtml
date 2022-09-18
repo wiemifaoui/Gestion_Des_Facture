@@ -1,0 +1,91 @@
+﻿
+@model List<App.Domain.Invoice>;
+@{
+
+    ViewData["Title"] = "pdf";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<script src="~/plugins/jquery/jquery.js"></script>
+
+
+
+
+
+<!DOCTYPE html>
+
+<style>
+    table, th, td {
+        border: 1px solid black;
+    }
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<body>
+    <div class="htmlstuff">
+        <h2>Invoice</h2>
+        @{ 
+            float amount = 0;
+        <table style="width:100%" class="table-bordered">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Invoice number</th>
+                    <th>Invoice amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var Invoice in Model)
+                {
+                    amount += float.Parse(Invoice.InvoiceAmount);
+                    <tr>
+                        <th>@Invoice.InvoiceDate</th>
+                        <th>@Invoice.InvoiceID</th>
+                        <th>@Invoice.InvoiceAmount</th>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Total des factures:</td>
+                    <td>@Json.Serialize(amount) DT</td>
+                </tr>
+            </tfoot>
+        </table>
+                }
+</div>
+
+
+
+
+
+        <div class="mt-5">
+            <button class="btn btn-primary" id="btngenerate">Generate Pdf</button>
+        </div>
+    </body>
+    <script type="text/javascript">
+        $("#btngenerate").click(function () {
+        var htmldata = $(".htmlstuff").html();
+        htmldata = htmldata.replace(/</g, "strtTag").replace(/>/g, "EndTag");
+           // window.location = window.location.origin + '/Historique/GeneratePdf?html=' + htmldata;
+            $.post(window.location.origin + '/Historique/GeneratePdf',
+                {
+                    html: htmldata,
+                    lst:'@Json.Serialize(Model)'
+                }
+            );
+        });
+    </script>
+ 
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,139 @@
+﻿@model List<App.Domain.Invoice>;
+@{
+    ViewData["Title"] = "Traitement_facture";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Traitement des factures</h1>
+<hr height:100vh;
+    width:.5vw;
+    border-width:0;
+    color:#000;
+    background-color:#000;>
+
+<strong>Voici la liste des factures soumis.(<span style="color:red"> En rouges</span> les factures présentant une erreur qui ne seront pas traiter) </strong>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <!-- /.card-header -->
+            <div class="card-body table-responsive p-0">
+                <table class="table table-hover text-nowrap">
+                    <thead>
+                    </thead>
+                    <tbody>
+                        @foreach(var item in Model){
+                            <tr>
+                                <td>@item.InvoiceFileName</td>
+                                <td>@item.InvoiceDate</td>
+                                <td>@item.InvoiceAmount TND</td>
+                                <td>
+                                    @if (item.IsApproved)
+                                    {
+                                        <div class="icheck-success d-inline">
+                                            <input type="radio" name="r5" checked="" id="radioDanger1">
+                                            <label for="radioDanger1">
+                                            </label>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <i class="icon fas fa-exclamation-triangle"></i>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                       @* <tr>
+                            <td>filename 3.pdf</td>
+                            <td>11-7-2014</td>
+                            <td>13.500 TND</td>
+                            <td><i class="icon fas fa-exclamation-triangle"></i></td>
+                            <td>
+                                <div class="icheck-danger d-inline">
+                                    <input type="radio" name="r1" checked="" id="radioDanger1">
+                                    <label for="radioDanger1">
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>filename 4.pdf</td>
+                            <td>11-7-2014</td>
+                            <td>13.500 TND</td>
+                            <td><i class="icon fas fa-exclamation-triangle"></i></td>
+                            <td>
+                                <div class="icheck-danger d-inline">
+                                    <input type="radio" name="r2" checked="" id="radioDanger1">
+                                    <label for="radioDanger1">
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>filename 5.pdf</td>
+                            <td>11-7-2014</td>
+                            <td>13.500 TND</td>
+                            <td><i class="icon fas fa-exclamation-triangle"></i></td>
+                            <td>
+                                <div class="icheck-danger d-inline">
+                                    <input type="radio" name="r3" checked="" id="radioDanger1">
+                                    <label for="radioDanger1">
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                        <tr>
+                            <td>filename 6.pdf</td>
+                            <td>11-7-2014</td>
+                            <td>13.500 TND</td>
+                            <td><i class="icon fas fa-exclamation-triangle"></i></td>
+                            <td>
+                                <div class="icheck-danger d-inline">
+                                    <input type="radio" name="r4" checked="" id="radioDanger1">
+                                    <label for="radioDanger1">
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>*@
+                      
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+    </div>
+</div>
+
+<div>
+    <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck2">
+        <label class="form-check-label" for="exampleCheck2">Envoyer une copie par email</label>
+    </div>
+
+    <input type="button" value="Confirmation" style="float: right;" onclick="SendDataToHistory()" />
+
+
+</div>
+
+<script>
+
+    var lstInvoicess = @Json.Serialize(Model);
+
+    function SaveData(){
+       
+        $.post('/Facture/InsertData', { lstInvoices: lstInvoicess },
+            function () {
+                alert("OK");
+            });
+    }
+
+    function SendDataToHistory() {
+
+        $.post('/Historique/IonosSubmit', { lstInvoices: @Json.Serialize(Model) },
+            function () {
+                window.location.href='/Historique/Ionos';
+            });
+    }
+</script>

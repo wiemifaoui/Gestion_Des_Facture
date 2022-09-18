@@ -1,0 +1,10 @@
+C:\Users\HP\Desktop\ionos-master\App.Domain\bin\Release\netcoreapp3.1\App.Domain.deps.json
+C:\Users\HP\Desktop\ionos-master\App.Domain\bin\Release\netcoreapp3.1\App.Domain.dll
+C:\Users\HP\Desktop\ionos-master\App.Domain\bin\Release\netcoreapp3.1\App.Domain.pdb
+C:\Users\HP\Desktop\ionos-master\App.Domain\obj\Release\netcoreapp3.1\App.Domain.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\ionos-master\App.Domain\obj\Release\netcoreapp3.1\App.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\ionos-master\App.Domain\obj\Release\netcoreapp3.1\App.Domain.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\ionos-master\App.Domain\obj\Release\netcoreapp3.1\App.Domain.AssemblyInfo.cs
+C:\Users\HP\Desktop\ionos-master\App.Domain\obj\Release\netcoreapp3.1\App.Domain.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\ionos-master\App.Domain\obj\Release\netcoreapp3.1\App.Domain.dll
+C:\Users\HP\Desktop\ionos-master\App.Domain\obj\Release\netcoreapp3.1\App.Domain.pdb

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\HP\Desktop\ionos-master\App.Web\bin\Release\netcoreapp3.1\publish\</_PublishTargetUrl>
+    <History>True|2022-08-05T09:56:21.4252535Z;True|2022-08-05T11:53:51.1353800+02:00;</History>
+  </PropertyGroup>
+</Project>

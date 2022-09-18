@@ -1,0 +1,15 @@
+C:\Users\HP\Desktop\ionos-master\App.Service\bin\Release\netcoreapp3.1\App.Service.deps.json
+C:\Users\HP\Desktop\ionos-master\App.Service\bin\Release\netcoreapp3.1\App.Service.dll
+C:\Users\HP\Desktop\ionos-master\App.Service\bin\Release\netcoreapp3.1\App.Service.pdb
+C:\Users\HP\Desktop\ionos-master\App.Service\bin\Release\netcoreapp3.1\App.Data.dll
+C:\Users\HP\Desktop\ionos-master\App.Service\bin\Release\netcoreapp3.1\App.Domain.dll
+C:\Users\HP\Desktop\ionos-master\App.Service\bin\Release\netcoreapp3.1\App.Data.pdb
+C:\Users\HP\Desktop\ionos-master\App.Service\bin\Release\netcoreapp3.1\App.Domain.pdb
+C:\Users\HP\Desktop\ionos-master\App.Service\obj\Release\netcoreapp3.1\App.Service.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\ionos-master\App.Service\obj\Release\netcoreapp3.1\App.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\ionos-master\App.Service\obj\Release\netcoreapp3.1\App.Service.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\ionos-master\App.Service\obj\Release\netcoreapp3.1\App.Service.AssemblyInfo.cs
+C:\Users\HP\Desktop\ionos-master\App.Service\obj\Release\netcoreapp3.1\App.Service.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\ionos-master\App.Service\obj\Release\netcoreapp3.1\App.Service.csproj.CopyComplete
+C:\Users\HP\Desktop\ionos-master\App.Service\obj\Release\netcoreapp3.1\App.Service.dll
+C:\Users\HP\Desktop\ionos-master\App.Service\obj\Release\netcoreapp3.1\App.Service.pdb
